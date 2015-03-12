@@ -5,7 +5,12 @@
   <groupId>net.moonlithome.game</groupId>
   <artifactId>Illusory_Journey</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modules>
+        <module>ij.webapp</module>
+        <module>ij.user.api</module>
+        <module>ij.user.impl</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>Illusory_Journey</name>
   <url>http://maven.apache.org</url>
