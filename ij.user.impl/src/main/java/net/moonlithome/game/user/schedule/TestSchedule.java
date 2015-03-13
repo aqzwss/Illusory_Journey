@@ -1,6 +1,6 @@
-package net.moonlithome.game.schedule;
+package net.moonlithome.game.user.schedule;
 
-import net.moonlithome.game.dao.Good;
+import net.moonlithome.game.user.dao.Good;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;

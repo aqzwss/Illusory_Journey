@@ -14,8 +14,8 @@
     <context:annotation-config/>
 
     <context:component-scan base-package="net.moonlithome.game.action"/>
-    <context:component-scan base-package="net.moonlithome.game.schedule"/>
-    <context:component-scan base-package="net.moonlithome.game.dao"/>
+    <context:component-scan base-package="net.moonlithome.game.user.schedule"/>
+    <context:component-scan base-package="net.moonlithome.game.user.dao"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>

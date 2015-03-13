@@ -1,4 +1,4 @@
-package net.moonlithome.game.dao;
+package net.moonlithome.game.user.dao;
 
 import org.apache.ibatis.annotations.Param;
 

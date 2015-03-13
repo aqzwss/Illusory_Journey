@@ -9,6 +9,7 @@
         <module>ij.webapp</module>
         <module>ij.user.api</module>
         <module>ij.user.impl</module>
+        <module>ij.manage.api</module>
     </modules>
     <packaging>pom</packaging>
 

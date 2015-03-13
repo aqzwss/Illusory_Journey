@@ -7,9 +7,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ij.webapp</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>ij.webapp Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../ij.manage.impl</module>
+    </modules>
 
     <properties>
         <spring.version>4.1.5.RELEASE</spring.version>

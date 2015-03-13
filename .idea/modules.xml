@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Illusory_Journey.iml" filepath="$PROJECT_DIR$/Illusory_Journey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ij.manage.api/ij.manage.api.iml" filepath="$PROJECT_DIR$/ij.manage.api/ij.manage.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ij.manage.impl/ij.manage.impl.iml" filepath="$PROJECT_DIR$/ij.manage.impl/ij.manage.impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.user.api/ij.user.api.iml" filepath="$PROJECT_DIR$/ij.user.api/ij.user.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.user.impl/ij.user.impl.iml" filepath="$PROJECT_DIR$/ij.user.impl/ij.user.impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.webapp/ij.webapp.iml" filepath="$PROJECT_DIR$/ij.webapp/ij.webapp.iml" />

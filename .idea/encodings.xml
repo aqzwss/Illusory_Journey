@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ij.manage.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ij.manage.impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.user.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.user.impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.webapp" charset="UTF-8" />
