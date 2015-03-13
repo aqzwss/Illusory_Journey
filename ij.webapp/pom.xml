@@ -21,6 +21,11 @@
         <!--user module-->
         <dependency>
             <groupId>net.moonlithome.game</groupId>
+            <artifactId>ij.user.api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.moonlithome.game</groupId>
             <artifactId>ij.user.impl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
