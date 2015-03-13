@@ -1,5 +1,7 @@
 package net.moonlithome.game.schedule;
 
+import net.moonlithome.game.dao.TestMyBatis;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -13,9 +15,15 @@ import java.util.Date;
 @EnableScheduling
 public class TestSchedule {
 
-    @Scheduled(cron = "*/3 * * * * *")
+    @Autowired
+    private TestMyBatis testMyBatis;
+
+    @Scheduled(cron = "0 */2 * * * *")
 //    @Scheduled(fixedDelay = 5000)
     public void test(){
+        testMyBatis.testInsert("aaaaaa", "verygood");
+        testMyBatis.testInsertTwice("111", "1111");
+        testMyBatis.testInsertTrible("1111");
         System.out.println("now is :" + new Date());
     }
 
