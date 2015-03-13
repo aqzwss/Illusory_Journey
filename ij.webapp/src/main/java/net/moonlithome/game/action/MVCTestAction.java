@@ -18,13 +18,4 @@ public class MVCTestAction {
         modelMap.addAttribute("message", "Hello World!!");
         return "hello";
     }
-
-    @RequestMapping("good")
-    public String ttest(ModelMap modelMap){
-        modelMap.addAttribute("message", "FIAWJFIWNALGFIWJRGRWG");
-        System.out.println("Yup!!");
-        return "hello";
-    }
-
-
 }
