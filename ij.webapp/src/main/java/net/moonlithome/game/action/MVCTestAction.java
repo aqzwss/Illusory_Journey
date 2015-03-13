@@ -1,7 +1,5 @@
 package net.moonlithome.game.action;
 
-import net.moonlithome.game.dao.TestMyBatis;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MVCTestAction {
 
-    @Autowired
-    private TestMyBatis testMyBatis;
+//    @Autowired
+//    private TestMyBatis testMyBatis;
 
     @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
     public String testMVC(ModelMap modelMap){
 //        modelMap.addAttribute("message", "Hello World!!");
-        testMyBatis.testInsert("aaaaaa", "verygood");
-        testMyBatis.testInsertTwice("111", "1111");
-        testMyBatis.testInsertTrible("1111");
+//        testMyBatis.testInsert("aaaaaa", "verygood");
+//        testMyBatis.testInsertTwice("111", "1111");
+//        testMyBatis.testInsertTrible("1111");
         System.out.println("very good!!");
         return "hello";
     }
