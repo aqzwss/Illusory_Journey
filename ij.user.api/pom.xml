@@ -19,6 +19,14 @@
 
     <dependencies>
 
+        <!--module-->
+        <dependency>
+            <groupId>net.moonlithome.game</groupId>
+            <artifactId>ij.common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>

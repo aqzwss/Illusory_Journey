@@ -23,18 +23,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="ij.common" />
+        <module name="ij.framework" />
         <module name="ij.manage.api" />
         <module name="ij.manage.impl" />
+        <module name="ij.system.api" />
+        <module name="ij.system.impl" />
         <module name="ij.user.api" />
         <module name="ij.user.impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ij.common" target="1.6" />
+      <module name="ij.framework" target="1.6" />
       <module name="ij.manage.api" target="1.6" />
       <module name="ij.manage.impl" target="1.6" />
+      <module name="ij.system.api" target="1.6" />
+      <module name="ij.system.impl" target="1.6" />
       <module name="ij.user.api" target="1.6" />
       <module name="ij.user.impl" target="1.6" />
       <module name="ij.webapp" target="1.6" />
+      <module name="ij.webapp.server" target="1.6" />
+      <module name="ij.webapp.system" target="1.6" />
       <module name="Illusory_Journey" target="1.6" />
     </bytecodeTargetLevel>
   </component>

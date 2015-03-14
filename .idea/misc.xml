@@ -32,7 +32,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/ij.webapp" />
+    <file type="web" url="file://$PROJECT_DIR$/ij.webapp.server" />
   </component>
   <component name="IdProvider" IDEtalkID="66D99672925107DC931DC4A91AAEC25E" />
   <component name="MavenProjectsManager">

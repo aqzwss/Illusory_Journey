@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ij.webapp" />
+          <element id="module-output" name="ij.webapp.server" />
         </element>
         <element id="directory" name="lib">
           <element id="archive" name="ij.user.api-1.0-SNAPSHOT.jar">
@@ -33,12 +33,24 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
+          <element id="archive" name="ij.framework-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ij.framework" />
+          </element>
+          <element id="archive" name="ij.common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ij.common" />
+          </element>
+          <element id="archive" name="ij.system.api-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ij.system.api" />
+          </element>
+          <element id="archive" name="ij.system.impl-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ij.system.impl" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/ij.webapp/target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/ij.webapp.server/target/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="ij.webapp/web/Web" />
+      <element id="javaee-facet-resources" facet="ij.webapp.server/web/Web" />
     </root>
   </artifact>
 </component>

@@ -6,10 +6,14 @@
   <artifactId>Illusory_Journey</artifactId>
   <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>ij.webapp</module>
+        <module>ij.webapp.server</module>
         <module>ij.user.api</module>
         <module>ij.user.impl</module>
-        <module>ij.manage.api</module>
+        <module>ij.system.api</module>
+        <module>ij.system.impl</module>
+        <module>ij.framework</module>
+        <module>ij.common</module>
+        <module>ij.webapp.system</module>
     </modules>
     <packaging>pom</packaging>
 
