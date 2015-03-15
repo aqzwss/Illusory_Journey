@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Created by MF on 3/14/2015.
  */
-public class BaseDto implements Serializable {
+public class BaseServerDto implements Serializable {
     private int id;
     private Date createTime;
     private Date updateTime;

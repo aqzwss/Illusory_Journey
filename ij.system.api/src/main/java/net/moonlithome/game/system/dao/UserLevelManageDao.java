@@ -1,6 +1,6 @@
 package net.moonlithome.game.system.dao;
 
-import net.moonlithome.game.common.dto.UserLevelDto;
+import net.moonlithome.game.common.dto.UserLevelServerDto;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -10,11 +10,11 @@ import java.util.List;
  */
 public interface UserLevelManageDao {
 
-    List<UserLevelDto> getUserLevel(@Param(value = "levelId")int levelId);
+    List<UserLevelServerDto> getUserLevel(@Param(value = "levelId")int levelId);
 
-    void addUserLevel(UserLevelDto userLevelDto);
+    void addUserLevel(UserLevelServerDto userLevelDto);
 
-    void updateUserLevel(UserLevelDto userLevelDto);
+    void updateUserLevel(UserLevelServerDto userLevelDto);
 
     void removeUserLevel(int levelId);
 
