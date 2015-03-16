@@ -1,6 +1,6 @@
 package net.moonlithome.game.system.action;
 
-import net.moonlithome.game.common.dto.UserLevelServerDto;
+import net.moonlithome.game.common.dto.user.UserLevelDto;
 import net.moonlithome.game.framework.action.BaseAction;
 import net.moonlithome.game.framework.dto.BaseCommunicationDto;
 import net.moonlithome.game.framework.util.JsonBeanUtil;
@@ -23,7 +23,7 @@ public class UserLevelManageAction extends BaseAction{
 
     @RequestMapping("/addUserLevel")
     public void addUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        UserLevelServerDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelServerDto.class);
+        UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
         //TODO check session
         if(userLevelDto != null){
             userLevelManageDao.addUserLevel(userLevelDto);
@@ -34,7 +34,7 @@ public class UserLevelManageAction extends BaseAction{
 
     @RequestMapping("/updateUserLevel")
     public void updateUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        UserLevelServerDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelServerDto.class);
+        UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
         //TODO check session
         if(userLevelDto != null){
             userLevelManageDao.updateUserLevel(userLevelDto);
@@ -45,7 +45,7 @@ public class UserLevelManageAction extends BaseAction{
 
     @RequestMapping("/removeUserLevel")
     public void removeUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        UserLevelServerDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelServerDto.class);
+        UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
         //TODO check session
         if(userLevelDto != null){
             userLevelManageDao.removeUserLevel(userLevelDto.getId());

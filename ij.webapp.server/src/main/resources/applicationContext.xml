@@ -14,7 +14,7 @@
     <context:annotation-config/>
 
     <context:component-scan base-package="net.moonlithome.game.system.action"/>
-    <context:component-scan base-package="net.moonlithome.game.server.user.schedule"/>
+    <context:component-scan base-package="net.moonlithome.game.server.user.scheduleImpl"/>
     <context:component-scan base-package="net.moonlithome.game.server.user.dao"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

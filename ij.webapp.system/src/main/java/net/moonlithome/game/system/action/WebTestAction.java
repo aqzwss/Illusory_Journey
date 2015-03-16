@@ -1,6 +1,6 @@
 package net.moonlithome.game.system.action;
 
-import net.moonlithome.game.common.dto.UserLevelServerDto;
+import net.moonlithome.game.common.dto.user.UserLevelDto;
 import net.moonlithome.game.system.dao.UserLevelManageDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ public class WebTestAction {
 
     @RequestMapping("user_level")
     public void testUserLevel(HttpServletRequest request, HttpServletResponse response){
-        UserLevelServerDto userLevelDto = new UserLevelServerDto();
+        UserLevelDto userLevelDto = new UserLevelDto();
         userLevelDto.setId(5);
         userLevelDto.setLevelFlag("12");
         userLevelDto.setBeforeName("学徒");
