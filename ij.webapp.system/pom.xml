@@ -131,6 +131,13 @@
             <version>1.2.2</version>
         </dependency>
 
+        <!--pagehelper plugin-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+
         <!--json plugin-->
         <dependency>
             <groupId>com.google.code.gson</groupId>

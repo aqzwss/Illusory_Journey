@@ -8,7 +8,7 @@
         <result property="userId" column="user_id"/>
         <result property="levelFlag" column="level_flag"/>
         <result property="positionId" column="position_id"/>
-        <result property="packageId" column="package_id"/>
+        <result property="bagId" column="bag_id"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>
@@ -33,7 +33,7 @@
         level_flag,
         experience,
         position_id,
-        package_id,
+        bag_id,
         create_time,
         update_time
         ) VALUES (
@@ -44,7 +44,7 @@
         levelFlag,
         experience,
         positionId,
-        packageId,
+        bagId,
         now(),
         now()
         )
@@ -74,8 +74,8 @@
         <if test="positionId != null">
             ,position_id = #{positionId}
         </if>
-        <if test="packageId != null">
-            ,package_id = #{packageId}
+        <if test="bagId != null">
+            ,bag_id = #{bagId}
         </if>
     </update>
 
