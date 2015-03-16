@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="net.moonlithome.game.system.dao.UserLevelManageDao">
 
-    <resultMap id="userLevelResultMap" type="net.moonlithome.game.common.dto.UserLevelServerDto">
+    <resultMap id="userLevelResultMap" type="net.moonlithome.game.common.dto.user.UserLevelDto">
         <result property="levelFlag" column="level_flag"/>
         <result property="beforeName" column="before_name"/>
         <result property="afterName" column="after_name"/>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.moonlithome.game.server.user.dao.UserAttributeDao">
+
+    <resultMap id="userAttributeResultMap" type="net.moonlithome.game.common.dto.user.UserAttributeDto">
+        <result property="userId" column="user_id"/>
+        <result property="physicalAttack" column="physical_attack"/>
+        <result property="spellAttack" column="spell_attack"/>
+        <result property="physicalDefence" column="physical_defence"/>
+        <result property="spellDefence" column="spell_defence"/>
+        <result property="armorPenetration" column="armor_penetration"/>
+        <result property="spellPenetration" column="spell_penetration"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+    <select id="getUserAttribute" resultMap="userAttributeResultMap">
+        SELECT * FROM user_attribute
+        <where>
+            <if test="userId != null">
+                user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addUserAttribute">
+        INSERT INTO user_attribute
+        (
+          user_id,
+          physical_attack,
+          spell_attack,
+          armor,
+          resistance,
+          physical_defence,
+          spell_defence,
+          armor_penetration,
+          spell_penetration,
+          create_time,
+          update_time
+        ) VALUES (
+          userId,
+          physicalAttack,
+          spellAttack,
+          armor,
+          resistance,
+          physicalDefence,
+          spellDefence,
+          armorPenetration,
+          spellPenetration,
+          now(),
+          now()
+        )
+    </insert>
+
+    <update id="updateUserAttribute">
+        UPDATE user_attribute
+        SET update_time = now()
+        <if test="userId != null">
+            ,user_id = #{userId}
+        </if>
+        <if test="physicalAttack != null">
+            ,physical_attack = #{physicalAttack}
+        </if>
+        <if test="spellAttack != null">
+            ,spell_attack = #{spellAttack}
+        </if>
+        <if test="armor != null">
+            ,armor = #{armor}
+        </if>
+        <if test="resistance != null">
+            ,resistance = #{resistance}
+        </if>
+        <if test="physicalDefence != null">
+            ,physical_defence = #{physicalDefence}
+        </if>
+        <if test="spellDefence != null">
+            ,spell_defence = #{spellDefence}
+        </if>
+        <if test="armorPenetration != null">
+            ,armor_penetration = #{armorPenetration}
+        </if>
+        <if test="spellPenetration != null">
+            ,spell_penetration = #{spellPenetration}
+        </if>
+    </update>
+
+    <delete id="removeUserAttribute">
+        DELETE FROM user_attribute
+        WHERE user_id = #{userId}
+    </delete>
+
+</mapper>

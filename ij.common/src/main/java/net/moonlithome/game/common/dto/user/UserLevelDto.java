@@ -1,11 +1,11 @@
-package net.moonlithome.game.common.dto;
+package net.moonlithome.game.common.dto.user;
 
 import net.moonlithome.game.framework.dto.BaseServerDto;
 
 /**
  * Created by MF on 3/14/2015.
  */
-public class UserLevelServerDto extends BaseServerDto {
+public class UserLevelDto extends BaseServerDto {
 
     private String levelFlag;
     private String beforeName;
