@@ -14,7 +14,7 @@ public class UserInfoDto extends BaseServerDto {
     private String levelFlag;
     private int experience;
     private int positionId;
-    private String packageId;
+    private String bagId;
 
     public int getUserId() {
         return userId;
@@ -72,11 +72,11 @@ public class UserInfoDto extends BaseServerDto {
         this.positionId = positionId;
     }
 
-    public String getPackageId() {
-        return packageId;
+    public String getBagId() {
+        return bagId;
     }
 
-    public void setPackageId(String packageId) {
-        this.packageId = packageId;
+    public void setBagId(String bagId) {
+        this.bagId = bagId;
     }
 }
