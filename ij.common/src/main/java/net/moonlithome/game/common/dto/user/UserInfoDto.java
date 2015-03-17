@@ -7,6 +7,21 @@ import net.moonlithome.game.framework.dto.BaseServerDto;
  */
 public class UserInfoDto extends BaseServerDto {
 
+    public UserInfoDto() {
+    }
+
+    public UserInfoDto(int userId, String name, String sex, String race, String levelFlag, int experience, int exIncreaseRate, int positionId, String bagId) {
+        this.userId = userId;
+        this.name = name;
+        this.sex = sex;
+        this.race = race;
+        this.levelFlag = levelFlag;
+        this.experience = experience;
+        this.exIncreaseRate = exIncreaseRate;
+        this.positionId = positionId;
+        this.bagId = bagId;
+    }
+
     private int userId;
     private String name;
     private String sex;

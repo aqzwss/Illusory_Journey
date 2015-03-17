@@ -28,8 +28,8 @@ public class UserOperationServiceImpl implements UserOperationService {
 
     @Override
     public boolean userRegister(UserInfoDto userInfoDto) {
-        UserAttributeDto userAttributeDto = new UserAttributeDto();
-        UserStatusDto userStatusDto = new UserStatusDto();
+        UserAttributeDto userAttributeDto = null;
+        UserStatusDto userStatusDto = null;
         int userId = UserContantData.userId;
         UserContantData.userId += 1;
 
@@ -37,6 +37,9 @@ public class UserOperationServiceImpl implements UserOperationService {
         userInfoDao.addUserInfo(userInfoDto);
 
         if("human".equalsIgnoreCase(userInfoDto.getRace())){
+            userAttributeDto = new UserAttributeDto(userId, 10, 0, 2, 0, 0, 0, 0, 0);
+            userStatusDto = new UserStatusDto(userId, 100, 100, 0, 0);
+        } else {
 
         }
 
@@ -53,7 +56,7 @@ public class UserOperationServiceImpl implements UserOperationService {
             userInfoDto.setUserId(userId);
             userInfoDto.setLevelFlag(String.valueOf(Integer.valueOf(currentLevelFlag) + 1));
             userInfoDao.updateUserInfo(userInfoDto);
-            ((UserInfoDto) UserContantData.allUserInfoMap.get(userId)).setLevelFlag(currentLevelFlag + 1);
+//            ((UserInfoDto) UserContantData.allUserInfoMap.get(userId)).setLevelFlag(currentLevelFlag + 1);
         }
         return false;
     }

@@ -7,6 +7,17 @@ import net.moonlithome.game.framework.dto.BaseServerDto;
  */
 public class UserLevelDto extends BaseServerDto {
 
+    public UserLevelDto() {
+    }
+
+    public UserLevelDto(String levelFlag, String beforeName, String afterName, int experience, int adventure) {
+        this.levelFlag = levelFlag;
+        this.beforeName = beforeName;
+        this.afterName = afterName;
+        this.experience = experience;
+        this.adventure = adventure;
+    }
+
     private String levelFlag;
     private String beforeName;
     private String afterName;

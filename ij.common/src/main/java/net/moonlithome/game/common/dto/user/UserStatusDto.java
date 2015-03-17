@@ -7,6 +7,17 @@ import net.moonlithome.game.framework.dto.BaseServerDto;
  */
 public class UserStatusDto extends BaseServerDto {
 
+    public UserStatusDto() {
+    }
+
+    public UserStatusDto(int userId, int currentHp, int maxHp, int currentMp, int maxMp) {
+        this.userId = userId;
+        this.currentHp = currentHp;
+        this.maxHp = maxHp;
+        this.currentMp = currentMp;
+        this.maxMp = maxMp;
+    }
+
     private int userId;
     private int currentHp;
     private int maxHp;

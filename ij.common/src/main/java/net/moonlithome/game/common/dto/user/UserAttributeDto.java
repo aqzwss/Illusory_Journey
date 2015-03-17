@@ -7,6 +7,21 @@ import net.moonlithome.game.framework.dto.BaseServerDto;
  */
 public class UserAttributeDto extends BaseServerDto {
 
+    public UserAttributeDto() {
+    }
+
+    public UserAttributeDto(int userId, int physicalAttack, int spellAttack, int armor, int resistance, int physicalDefence, int spellDefence, int armorPenetration, int spellPenetration) {
+        this.userId = userId;
+        this.physicalAttack = physicalAttack;
+        this.spellAttack = spellAttack;
+        this.armor = armor;
+        this.resistance = resistance;
+        this.physicalDefence = physicalDefence;
+        this.spellDefence = spellDefence;
+        this.armorPenetration = armorPenetration;
+        this.spellPenetration = spellPenetration;
+    }
+
     private int userId;
     private int physicalAttack;
     private int spellAttack;
