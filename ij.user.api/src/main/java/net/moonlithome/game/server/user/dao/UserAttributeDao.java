@@ -10,12 +10,12 @@ import java.util.List;
  */
 public interface UserAttributeDao {
 
-    List<UserAttributeDto> getUserAttribute(@Param(value = "userId")int userId);
+    List<UserAttributeDto> getUserAttribute(@Param(value = "userId")String userId);
 
     void addUserAttribute(UserAttributeDto userAttributeDto);
 
     void updateUserAttribute(UserAttributeDto userAttributeDto);
 
-    void removeUserAttribute(@Param(value = "userId")int userId);
+    void removeUserAttribute(@Param(value = "userId")String userId);
 
 }

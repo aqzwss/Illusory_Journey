@@ -4,6 +4,7 @@ import net.moonlithome.game.common.contant.UserContantData;
 import net.moonlithome.game.common.dto.user.UserAttributeDto;
 import net.moonlithome.game.common.dto.user.UserInfoDto;
 import net.moonlithome.game.common.dto.user.UserStatusDto;
+import net.moonlithome.game.common.util.UserOperationUtil;
 import net.moonlithome.game.server.user.dao.UserAttributeDao;
 import net.moonlithome.game.server.user.dao.UserInfoDao;
 import net.moonlithome.game.server.user.dao.UserStatusDao;
@@ -30,8 +31,7 @@ public class UserOperationServiceImpl implements UserOperationService {
     public boolean userRegister(UserInfoDto userInfoDto) {
         UserAttributeDto userAttributeDto = null;
         UserStatusDto userStatusDto = null;
-        int userId = UserContantData.userId;
-        UserContantData.userId += 1;
+        String userId = UserOperationUtil.generateUserId();
 
         userInfoDto.setUserId(userId);
         userInfoDao.addUserInfo(userInfoDto);
@@ -40,7 +40,7 @@ public class UserOperationServiceImpl implements UserOperationService {
             userAttributeDto = new UserAttributeDto(userId, 10, 0, 2, 0, 0, 0, 0, 0);
             userStatusDto = new UserStatusDto(userId, 100, 100, 0, 0);
         } else {
-
+            //TODO other race initialization
         }
 
         userAttributeDao.addUserAttribute(userAttributeDto);
@@ -50,7 +50,7 @@ public class UserOperationServiceImpl implements UserOperationService {
     }
 
     @Override
-    public boolean userUpgrade(int userId, String currentLevelFlag, String typeFlag) {
+    public boolean userUpgrade(String userId, String currentLevelFlag, String typeFlag) {
         if("user_level".equals(typeFlag)){
             UserInfoDto userInfoDto = new UserInfoDto();
             userInfoDto.setUserId(userId);
@@ -62,7 +62,7 @@ public class UserOperationServiceImpl implements UserOperationService {
     }
 
     @Override
-    public boolean gainExperience(int userId, int experience) {
+    public boolean gainExperience(String userId, int experience) {
 
         return false;
     }

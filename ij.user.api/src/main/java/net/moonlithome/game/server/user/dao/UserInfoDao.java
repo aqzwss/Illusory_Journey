@@ -10,12 +10,12 @@ import java.util.List;
  */
 public interface UserInfoDao {
 
-    List<UserInfoDto> getUserInfo(@Param(value = "userId")int userId);
+    List<UserInfoDto> getUserInfo(@Param(value = "userId")String userId);
 
     void addUserInfo(UserInfoDto userInfoDto);
 
     void updateUserInfo(UserInfoDto userInfoDto);
 
-    void removeUserInfo(@Param(value = "userId")int userId);
+    void removeUserInfo(@Param(value = "userId")String userId);
 
 }

@@ -14,7 +14,6 @@
         <module>ij.framework</module>
         <module>ij.common</module>
         <module>ij.webapp.system</module>
-        <module>ij.item.api</module>
     </modules>
     <packaging>pom</packaging>
 

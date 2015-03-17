@@ -30,7 +30,7 @@ public class UserExperienceScheduleImpl implements UserExperienceSchedule {
 
     private void databaseGainExperience() {
         UserInfoDto resultDto;
-        List<UserInfoDto> userInfoDtoList = userInfoDao.getUserInfo(-100);
+        List<UserInfoDto> userInfoDtoList = userInfoDao.getUserInfo(null);
         for (UserInfoDto userInfoDto : userInfoDtoList){
             resultDto = new UserInfoDto();
             resultDto.setUserId(userInfoDto.getUserId());

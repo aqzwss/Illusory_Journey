@@ -13,10 +13,9 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class UserContantData {
 
-    public static int userId = 0;
-    public static Map<Integer, Object> allUserInfoMap = Collections.synchronizedMap(new ConcurrentHashMap<Integer, Object>());
-    public static Map<Integer, Object> allUserAttributeMap = Collections.synchronizedMap(new ConcurrentHashMap<Integer, Object>());
-    public static Map<Integer, Object> allUserStatusMap = Collections.synchronizedMap(new ConcurrentHashMap<Integer, Object>());
+    public static Map<String, Object> allUserInfoMap = Collections.synchronizedMap(new ConcurrentHashMap<String, Object>());
+    public static Map<String, Object> allUserAttributeMap = Collections.synchronizedMap(new ConcurrentHashMap<String, Object>());
+    public static Map<String, Object> allUserStatusMap = Collections.synchronizedMap(new ConcurrentHashMap<String, Object>());
     public static List<UserLevelDto> allLevelList = Collections.synchronizedList(new ArrayList<UserLevelDto>());
 
 }

@@ -10,7 +10,7 @@ public class UserInfoDto extends BaseServerDto {
     public UserInfoDto() {
     }
 
-    public UserInfoDto(int userId, String name, String sex, String race, String levelFlag, int experience, int exIncreaseRate, int positionId, String bagId) {
+    public UserInfoDto(String userId, String name, String sex, String race, String levelFlag, int experience, int exIncreaseRate, int positionId, String bagId) {
         this.userId = userId;
         this.name = name;
         this.sex = sex;
@@ -22,7 +22,7 @@ public class UserInfoDto extends BaseServerDto {
         this.bagId = bagId;
     }
 
-    private int userId;
+    private String userId;
     private String name;
     private String sex;
     private String race;
@@ -32,11 +32,11 @@ public class UserInfoDto extends BaseServerDto {
     private int positionId;
     private String bagId;
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

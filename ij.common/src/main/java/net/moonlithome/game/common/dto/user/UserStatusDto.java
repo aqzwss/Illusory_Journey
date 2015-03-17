@@ -10,7 +10,7 @@ public class UserStatusDto extends BaseServerDto {
     public UserStatusDto() {
     }
 
-    public UserStatusDto(int userId, int currentHp, int maxHp, int currentMp, int maxMp) {
+    public UserStatusDto(String userId, int currentHp, int maxHp, int currentMp, int maxMp) {
         this.userId = userId;
         this.currentHp = currentHp;
         this.maxHp = maxHp;
@@ -18,17 +18,17 @@ public class UserStatusDto extends BaseServerDto {
         this.maxMp = maxMp;
     }
 
-    private int userId;
+    private String userId;
     private int currentHp;
     private int maxHp;
     private int currentMp;
     private int maxMp;
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

@@ -31,5 +31,13 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!--mybatis page plugin-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+
     </dependencies>
 </project>

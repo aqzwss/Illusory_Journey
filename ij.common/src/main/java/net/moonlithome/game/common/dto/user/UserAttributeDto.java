@@ -10,7 +10,7 @@ public class UserAttributeDto extends BaseServerDto {
     public UserAttributeDto() {
     }
 
-    public UserAttributeDto(int userId, int physicalAttack, int spellAttack, int armor, int resistance, int physicalDefence, int spellDefence, int armorPenetration, int spellPenetration) {
+    public UserAttributeDto(String userId, int physicalAttack, int spellAttack, int armor, int resistance, int physicalDefence, int spellDefence, int armorPenetration, int spellPenetration) {
         this.userId = userId;
         this.physicalAttack = physicalAttack;
         this.spellAttack = spellAttack;
@@ -22,7 +22,7 @@ public class UserAttributeDto extends BaseServerDto {
         this.spellPenetration = spellPenetration;
     }
 
-    private int userId;
+    private String userId;
     private int physicalAttack;
     private int spellAttack;
     private int armor;
@@ -32,11 +32,11 @@ public class UserAttributeDto extends BaseServerDto {
     private int armorPenetration;
     private int spellPenetration;
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
