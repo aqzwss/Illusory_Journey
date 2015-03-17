@@ -7,6 +7,7 @@
     <resultMap id="userInfoResultMap" type="net.moonlithome.game.common.dto.user.UserInfoDto">
         <result property="userId" column="user_id"/>
         <result property="levelFlag" column="level_flag"/>
+        <result property="exIncreaseRate" column="ex_increase_rate"/>
         <result property="positionId" column="position_id"/>
         <result property="bagId" column="bag_id"/>
         <result property="createTime" column="create_time"/>
@@ -32,6 +33,7 @@
         race,
         level_flag,
         experience,
+        ex_increase_rate,
         position_id,
         bag_id,
         create_time,
@@ -43,6 +45,7 @@
         race,
         levelFlag,
         experience,
+        exIncreaseRate,
         positionId,
         bagId,
         now(),
@@ -70,6 +73,9 @@
         </if>
         <if test="experience != null">
             ,experience = #{experience}
+        </if>
+        <if test="exIncreaseRate != null">
+            ,ex_increase_rate = #{exIncreaseRate}
         </if>
         <if test="positionId != null">
             ,position_id = #{positionId}

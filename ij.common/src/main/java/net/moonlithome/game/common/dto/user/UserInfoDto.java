@@ -13,6 +13,7 @@ public class UserInfoDto extends BaseServerDto {
     private String race;
     private String levelFlag;
     private int experience;
+    private int exIncreaseRate;
     private int positionId;
     private String bagId;
 
@@ -62,6 +63,14 @@ public class UserInfoDto extends BaseServerDto {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public int getExIncreaseRate() {
+        return exIncreaseRate;
+    }
+
+    public void setExIncreaseRate(int exIncreaseRate) {
+        this.exIncreaseRate = exIncreaseRate;
     }
 
     public int getPositionId() {

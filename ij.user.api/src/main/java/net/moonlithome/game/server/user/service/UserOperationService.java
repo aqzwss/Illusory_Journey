@@ -9,9 +9,9 @@ public interface UserOperationService {
 
     public boolean userRegister(UserInfoDto userInfoDto);
 
-    public boolean userUpgrade(UserInfoDto userInfoDto);
+    public boolean userUpgrade(int userId, String currentLevelFlag, String typeFlag);
 
-    public boolean gainExperience(UserInfoDto userInfoDto);
+    public boolean gainExperience(int userId, int experience);
 
 
 

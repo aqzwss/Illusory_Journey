@@ -47,12 +47,20 @@ public class UserOperationServiceImpl implements UserOperationService {
     }
 
     @Override
-    public boolean userUpgrade(UserInfoDto userInfoDto) {
+    public boolean userUpgrade(int userId, String currentLevelFlag, String typeFlag) {
+        if("user_level".equals(typeFlag)){
+            UserInfoDto userInfoDto = new UserInfoDto();
+            userInfoDto.setUserId(userId);
+            userInfoDto.setLevelFlag(String.valueOf(Integer.valueOf(currentLevelFlag) + 1));
+            userInfoDao.updateUserInfo(userInfoDto);
+            ((UserInfoDto) UserContantData.allUserInfoMap.get(userId)).setLevelFlag(currentLevelFlag + 1);
+        }
         return false;
     }
 
     @Override
-    public boolean gainExperience(UserInfoDto userInfoDto) {
+    public boolean gainExperience(int userId, int experience) {
+
         return false;
     }
 }
