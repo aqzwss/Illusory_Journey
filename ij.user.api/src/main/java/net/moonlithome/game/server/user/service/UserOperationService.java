@@ -1,12 +1,11 @@
 package net.moonlithome.game.server.user.service;
 
 import net.moonlithome.game.common.dto.user.UserInfoDto;
-import net.moonlithome.game.common.service.BaseService;
 
 /**
  * Created by moonlithome on 2015/3/16.
  */
-public interface UserOperationService extends BaseService{
+public interface UserOperationService{
 
     public boolean userRegiste(UserInfoDto userInfoDto);
 
