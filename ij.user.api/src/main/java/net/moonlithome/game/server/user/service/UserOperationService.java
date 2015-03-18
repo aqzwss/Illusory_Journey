@@ -8,7 +8,7 @@ import net.moonlithome.game.common.service.BaseService;
  */
 public interface UserOperationService extends BaseService{
 
-    public boolean userRegister(UserInfoDto userInfoDto);
+    public boolean userRegiste(UserInfoDto userInfoDto);
 
     public boolean userUpgrade(String userId, String currentLevelFlag, String typeFlag);
 

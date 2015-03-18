@@ -4,10 +4,12 @@ import net.moonlithome.game.common.dto.account.AccountInfoDto;
 import net.moonlithome.game.server.account.dao.AccountOperationDao;
 import net.moonlithome.game.server.account.service.AccountOperationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by moonlithome on 2015/3/17.
  */
+@Service
 public class AccountOperationServiceImpl implements AccountOperationService{
 
     @Autowired

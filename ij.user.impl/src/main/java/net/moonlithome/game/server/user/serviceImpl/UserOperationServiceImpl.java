@@ -28,7 +28,7 @@ public class UserOperationServiceImpl implements UserOperationService {
     private UserStatusDao userStatusDao;
 
     @Override
-    public boolean userRegister(UserInfoDto userInfoDto) {
+    public boolean userRegiste(UserInfoDto userInfoDto) {
         UserAttributeDto userAttributeDto = null;
         UserStatusDto userStatusDto = null;
         String userId = UserOperationUtil.generateUserId();

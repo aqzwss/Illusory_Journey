@@ -13,10 +13,11 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="net.moonlithome.game.system.action"/>
-    <context:component-scan base-package="net.moonlithome.game.server.user.scheduleImpl"/>
-    <context:component-scan base-package="net.moonlithome.game.server.user.serviceImpl"/>
-    <context:component-scan base-package="net.moonlithome.game.server.user.dao"/>
+    <context:component-scan base-package="net.moonlithome.game"/>
+    <!--<context:component-scan base-package="net.moonlithome.game.system.action"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.scheduleImpl"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.serviceImpl"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.dao"/>-->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
