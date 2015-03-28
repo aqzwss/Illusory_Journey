@@ -30,8 +30,9 @@ public class AccountOperationServiceImpl implements AccountOperationService{
         BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
         try {
             accountOperationDao.registAccount(accountInfoDto);
-
+            baseCommunicationDto.setErrorCode(ErrorCode.ERROR_OK);
         } catch (Exception e){
+            e.printStackTrace();
             baseCommunicationDto.setErrorCode(ErrorCode.ERROR_SERVICE);
         }
         return baseCommunicationDto;

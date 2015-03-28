@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.framework" charset="UTF-8" />
@@ -9,6 +9,9 @@
     <file url="file://$PROJECT_DIR$/ij.user.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.user.impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.webapp.server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ij.webapp.server/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ij.webapp.server/src/test/java/net/moonlithome/game/server/account/action/AccountOperationActionTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.webapp.system" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

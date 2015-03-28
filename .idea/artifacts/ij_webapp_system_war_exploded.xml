@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="ij.webapp.system:war exploded">
-    <output-path>$PROJECT_DIR$/ij.webapp.system/target/ij.webapp.system</output-path>
+    <output-path>$PROJECT_DIR$/target/ij.webapp.system</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -38,6 +38,7 @@
           <element id="archive" name="ij.system.impl-1.0-SNAPSHOT.jar">
             <element id="module-output" name="ij.system.impl" />
           </element>
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:3.6.3" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="ij.webapp.system/web/Web" />
