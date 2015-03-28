@@ -1,5 +1,7 @@
 package net.moonlithome.game.framework.dto;
 
+import net.moonlithome.game.framework.contant.ErrorCode;
+
 import java.io.Serializable;
 
 /**
@@ -14,8 +16,8 @@ public class BaseCommunicationDto implements Serializable{
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public void setErrorCode(ErrorCode errorCode) {
+        this.errorCode = errorCode.toString();
     }
 
     public String getErrorMsg() {

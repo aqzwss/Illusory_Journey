@@ -18,8 +18,8 @@
     <select id="getUserInfo" resultMap="userInfoResultMap">
         SELECT * FROM user_info
         <where>
-            <if test="userId != -100">
-                user_id = #{userId}
+            <if test="accountId != -100">
+                accountId = #{accountId}
             </if>
         </where>
     </select>

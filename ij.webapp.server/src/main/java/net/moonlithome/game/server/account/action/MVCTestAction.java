@@ -1,4 +1,4 @@
-package net.moonlithome.game.server.action;
+package net.moonlithome.game.server.account.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

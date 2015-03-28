@@ -1,6 +1,7 @@
 package net.moonlithome.game.server.account.dao;
 
 import net.moonlithome.game.common.dto.account.AccountInfoDto;
+import net.moonlithome.game.framework.dto.BaseCommunicationDto;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -8,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface AccountOperationDao {
 
-    void registerAccount(AccountInfoDto accountInfoDto);
+    BaseCommunicationDto registAccount(AccountInfoDto accountInfoDto);
 
     String getPasswdClose(@Param("accountId")String accountId);
 

@@ -1,6 +1,5 @@
 package net.moonlithome.game.server.user.serviceImpl;
 
-import net.moonlithome.game.common.contant.UserContantData;
 import net.moonlithome.game.common.dto.user.UserAttributeDto;
 import net.moonlithome.game.common.dto.user.UserInfoDto;
 import net.moonlithome.game.common.dto.user.UserStatusDto;
@@ -8,15 +7,16 @@ import net.moonlithome.game.common.util.UserOperationUtil;
 import net.moonlithome.game.server.user.dao.UserAttributeDao;
 import net.moonlithome.game.server.user.dao.UserInfoDao;
 import net.moonlithome.game.server.user.dao.UserStatusDao;
-import net.moonlithome.game.server.user.service.UserOperationService;
+import net.moonlithome.game.server.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 /**
  * Created by moonlithome on 2015/3/16.
  */
 @Service
-public class UserOperationServiceImpl implements UserOperationService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserInfoDao userInfoDao;
@@ -28,7 +28,7 @@ public class UserOperationServiceImpl implements UserOperationService {
     private UserStatusDao userStatusDao;
 
     @Override
-    public boolean userRegister(UserInfoDto userInfoDto) {
+    public boolean userRegist(UserInfoDto userInfoDto) {
         UserAttributeDto userAttributeDto = null;
         UserStatusDto userStatusDto = null;
         String userId = UserOperationUtil.generateUserId();
@@ -47,6 +47,24 @@ public class UserOperationServiceImpl implements UserOperationService {
         userStatusDao.addUserStatus(userStatusDto);
 
         return false;
+    }
+
+    @Override
+    public UserInfoDto getUserInfo(String accountId) {
+        if(!StringUtils.isEmpty(accountId)){
+            return userInfoDao.getUserInfo(accountId).get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public UserAttributeDto getUserAttribute(String userId) {
+        return userAttributeDao.getUserAttribute(userId).get(0);
+    }
+
+    @Override
+    public UserStatusDto getUserStatus(String userId) {
+        return userStatusDao.getUserStatus(userId).get(0);
     }
 
     @Override
