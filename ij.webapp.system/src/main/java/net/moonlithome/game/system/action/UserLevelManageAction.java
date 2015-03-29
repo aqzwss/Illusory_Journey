@@ -4,7 +4,7 @@ import net.moonlithome.game.common.dto.user.UserLevelDto;
 import net.moonlithome.game.framework.action.BaseAction;
 import net.moonlithome.game.framework.dto.BaseCommunicationDto;
 import net.moonlithome.game.framework.util.JsonBeanUtil;
-import net.moonlithome.game.system.dao.UserLevelManageDao;
+import net.moonlithome.game.system.mapper.UserLevelManageDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

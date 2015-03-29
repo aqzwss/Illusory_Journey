@@ -4,13 +4,12 @@ import net.moonlithome.game.framework.contant.ErrorCode;
 import net.moonlithome.game.common.dto.account.AccountInfoDto;
 import net.moonlithome.game.common.dto.user.UserInfoDto;
 import net.moonlithome.game.framework.dto.BaseCommunicationDto;
-import net.moonlithome.game.server.account.dao.AccountOperationDao;
+import net.moonlithome.game.server.account.mapper.AccountOperationMapper;
 import net.moonlithome.game.server.account.service.AccountOperationService;
 import net.moonlithome.game.server.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import sun.misc.BASE64Decoder;
 
 /**
  * Created by moonlithome on 2015/3/17.
@@ -19,7 +18,7 @@ import sun.misc.BASE64Decoder;
 public class AccountOperationServiceImpl implements AccountOperationService{
 
     @Autowired
-    private AccountOperationDao accountOperationDao;
+    private AccountOperationMapper accountOperationDao;
 
     @Autowired
     private UserService userService;

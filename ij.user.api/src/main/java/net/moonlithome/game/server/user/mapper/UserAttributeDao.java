@@ -1,4 +1,4 @@
-package net.moonlithome.game.server.user.dao;
+package net.moonlithome.game.server.user.mapper;
 
 import net.moonlithome.game.common.dto.user.UserAttributeDto;
 import org.apache.ibatis.annotations.Param;

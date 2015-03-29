@@ -9,8 +9,8 @@ public class MapInfoDto extends BaseServerDto {
 
     private int mapId;
     private String name;
-    private int send;
-    private int receive;
+    private String send;
+    private String receive;
     private String monster;
 
     public int getMapId() {
@@ -29,19 +29,19 @@ public class MapInfoDto extends BaseServerDto {
         this.name = name;
     }
 
-    public int getSend() {
+    public String getSend() {
         return send;
     }
 
-    public void setSend(int send) {
+    public void setSend(String send) {
         this.send = send;
     }
 
-    public int getReceive() {
+    public String getReceive() {
         return receive;
     }
 
-    public void setReceive(int receive) {
+    public void setReceive(String receive) {
         this.receive = receive;
     }
 

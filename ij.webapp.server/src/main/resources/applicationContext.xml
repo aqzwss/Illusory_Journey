@@ -49,7 +49,7 @@
         <!--<property name="markerInterface" value="com.account.daoer"/>-->
     <!--</bean>-->
 
-    <mybatis:scan base-package="net.moonlithome.game.server.account.dao" />
-    <mybatis:scan base-package="net.moonlithome.game.server.user.dao" />
+    <mybatis:scan base-package="net.moonlithome.game.server.account.mapper" />
+    <mybatis:scan base-package="net.moonlithome.game.server.user.mapper" />
 
 </beans>

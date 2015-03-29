@@ -2,14 +2,13 @@ package net.moonlithome.game.server.user.scheduleImpl;
 
 import net.moonlithome.game.common.contant.UserContantData;
 import net.moonlithome.game.common.dto.user.UserInfoDto;
-import net.moonlithome.game.server.user.dao.UserInfoDao;
+import net.moonlithome.game.server.user.mapper.UserInfoDao;
 import net.moonlithome.game.server.user.schedule.UserExperienceSchedule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
