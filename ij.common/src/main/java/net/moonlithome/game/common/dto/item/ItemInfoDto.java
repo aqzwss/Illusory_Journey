@@ -7,20 +7,21 @@ import net.moonlithome.game.framework.dto.BaseServerDto;
  */
 public class ItemInfoDto extends BaseServerDto{
 
-    private int itemId;
+    private String itemId;
     private String name;
     private String type;
     private String quality;
     private String effect;
     private String effectValue;
     private String subId;
+    private int spaceSize;
     private int author;
 
-    public int getItemId() {
+    public String getItemId() {
         return itemId;
     }
 
-    public void setItemId(int itemId) {
+    public void setItemId(String itemId) {
         this.itemId = itemId;
     }
 
@@ -70,6 +71,14 @@ public class ItemInfoDto extends BaseServerDto{
 
     public void setSubId(String subId) {
         this.subId = subId;
+    }
+
+    public int getSpaceSize() {
+        return spaceSize;
+    }
+
+    public void setSpaceSize(int spaceSize) {
+        this.spaceSize = spaceSize;
     }
 
     public int getAuthor() {

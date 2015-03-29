@@ -13,10 +13,11 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="net.moonlithome.game.system.action"/>
-    <context:component-scan base-package="net.moonlithome.game.user.schedule"/>
-    <context:component-scan base-package="net.moonlithome.game.user.dao"/>
-    <!--<context:component-scan base-package="net.moonlithome.game.system.dao"/>-->
+    <context:component-scan base-package="net.moonlithome.game"/>
+    <!--<context:component-scan base-package="net.moonlithome.game.system.action"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.scheduleImpl"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.serviceImpl"/>-->
+    <!--<context:component-scan base-package="net.moonlithome.game.server.user.dao"/>-->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -43,16 +44,18 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <!--<property name="configLocation" value="classpath:mybatis-config.xml"/>-->
-        <!--<property name="mapperLocations" value="classpath*:com/neusoft/account/mapper/*Mapper.xml"/>-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!--<property name="mapperLocations" value="classpath*:com/account/mapper/*Mapper.xml"/>-->
     </bean>
 
     <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
         <!--<property name="basePackage" value=""/>-->
-        <!--<property name="markerInterface" value="com.neusoft.account.daoer"/>-->
+        <!--<property name="markerInterface" value="com.account.daoer"/>-->
     <!--</bean>-->
 
-    <mybatis:scan base-package="net.moonlithome.game.system.dao" />
+    <!--<mybatis:scan base-package="net.moonlithome.game.server.user.dao" />-->
+    <mybatis:scan base-package="net.moonlithome.game.server" />
+    <!--<mybatis:scan base-package="net.moonlithome.game.server.item.dao"/>-->
 
 
 

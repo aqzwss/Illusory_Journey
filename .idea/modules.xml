@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Illusory_Journey.iml" filepath="$PROJECT_DIR$/Illusory_Journey.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.common/ij.common.iml" filepath="$PROJECT_DIR$/ij.common/ij.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.framework/ij.framework.iml" filepath="$PROJECT_DIR$/ij.framework/ij.framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ij.item.api/ij.item.api.iml" filepath="$PROJECT_DIR$/ij.item.api/ij.item.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ij.item.impl/ij.item.impl.iml" filepath="$PROJECT_DIR$/ij.item.impl/ij.item.impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.system.api/ij.system.api.iml" filepath="$PROJECT_DIR$/ij.system.api/ij.system.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.system.impl/ij.system.impl.iml" filepath="$PROJECT_DIR$/ij.system.impl/ij.system.impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/ij.user.api/ij.user.api.iml" filepath="$PROJECT_DIR$/ij.user.api/ij.user.api.iml" />

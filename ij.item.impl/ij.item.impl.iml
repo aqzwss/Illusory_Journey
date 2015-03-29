@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ij.item.api" />
+    <orderEntry type="module" module-name="ij.common" />
   </component>
 </module>

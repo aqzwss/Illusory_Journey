@@ -51,9 +51,6 @@
         <!--<property name="markerInterface" value="com.account.daoer"/>-->
     <!--</bean>-->
 
-    <mybatis:scan base-package="net.moonlithome.game.server.user.dao" />
-
-
-
+    <mybatis:scan base-package="net.moonlithome.game.server" />
 
 </beans>

@@ -9,13 +9,23 @@ import java.util.Date;
  */
 public class DateFormatUtil {
 
-    private static SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static SimpleDateFormat sfLang = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static SimpleDateFormat sfShort = new SimpleDateFormat("yyyy-MM-dd");
 
-    public static String formatDateToString(Date date){
-        return sf.format(date);
+    public static String formatLangDate(Date date){
+        return sfLang.format(date);
     }
 
-    public static Date parseStringToDate(String dateString) throws ParseException {
-        return sf.parse(dateString);
+    public static Date parseLangDate(String dateString) throws ParseException {
+        return sfLang.parse(dateString);
     }
+
+    public static String formatShortDate(Date date){
+        return sfShort.format(date);
+    }
+
+    public static Date parseShortDate(String dateString) throws ParseException{
+        return sfShort.parse(dateString);
+    }
+
 }
