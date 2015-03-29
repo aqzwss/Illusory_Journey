@@ -19,7 +19,7 @@ public class AccountOperationActionTest {
         AccountInfoDto accountInfoDto = new AccountInfoDto();
         accountInfoDto.setAccountId("ceshi");
         accountInfoDto.setPasswd("123456");
-        accountInfoDto.setTrueName("中文");
+        accountInfoDto.setTrueName("中文校验");
         accountInfoDto.setMobile("12332112312");
         accountInfoDto.setEmail("aqzwss@gmail.com");
 

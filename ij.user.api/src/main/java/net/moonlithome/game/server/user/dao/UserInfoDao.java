@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface UserInfoDao {
 
-    List<UserInfoDto> getUserInfo(@Param(value = "accountId")String accountId);
+    List<UserInfoDto> getUserInfo(@Param(value = "userId")String userId);
 
     void addUserInfo(UserInfoDto userInfoDto);
 

@@ -17,9 +17,9 @@
 
     <select id="getUserInfo" resultMap="userInfoResultMap">
         SELECT * FROM user_info
-        <where>
-            <if test="accountId != -100">
-                accountId = #{accountId}
+        <where> 1=1
+            <if test="userId != null and userId != ''">
+                AND user_id = #{userId}
             </if>
         </where>
     </select>

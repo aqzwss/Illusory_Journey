@@ -22,7 +22,7 @@ public class UserExperienceScheduleImpl implements UserExperienceSchedule {
     @Autowired
     private UserInfoDao userInfoDao;
 
-    @Scheduled(cron = "0 */2 * * * ?")
+    @Scheduled(cron = "0 */1 * * * ?")
     public void gainExperience(){
         databaseGainExperience();
 //        cacheGainExperience();
@@ -30,7 +30,7 @@ public class UserExperienceScheduleImpl implements UserExperienceSchedule {
 
     private void databaseGainExperience() {
         UserInfoDto resultDto;
-        List<UserInfoDto> userInfoDtoList = userInfoDao.getUserInfo(null);
+        List<UserInfoDto> userInfoDtoList = userInfoDao.getUserInfo("");
         for (UserInfoDto userInfoDto : userInfoDtoList){
             resultDto = new UserInfoDto();
             resultDto.setUserId(userInfoDto.getUserId());

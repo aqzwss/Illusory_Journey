@@ -50,9 +50,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserInfoDto getUserInfo(String accountId) {
-        if(!StringUtils.isEmpty(accountId)){
-            return userInfoDao.getUserInfo(accountId).get(0);
+    public UserInfoDto getUserInfo(String userId) {
+        if(!StringUtils.isEmpty(userId)){
+            return userInfoDao.getUserInfo(userId).get(0);
         }
         return null;
     }

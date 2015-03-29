@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface AccountOperationDao {
 
-    BaseCommunicationDto registAccount(AccountInfoDto accountInfoDto);
+    void registAccount(AccountInfoDto accountInfoDto);
 
     String getPasswdClose(@Param("accountId")String accountId);
 

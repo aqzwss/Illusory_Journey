@@ -43,7 +43,7 @@ public class AccountOperationServiceImpl implements AccountOperationService{
         UserInfoDto userInfoDto = new UserInfoDto();
         if(!StringUtils.isEmpty(accountInfoDto.getAccountId()) && !StringUtils.isEmpty(accountInfoDto.getPasswd())){
             if(accountInfoDto.getPasswd().equals(this.getPasswdClose(accountInfoDto.getAccountId()))){
-                userInfoDto = userService.getUserInfo(accountInfoDto.getAccountId());
+                userInfoDto = userService.getUserInfo(accountInfoDto.getUserId());
                 userInfoDto.setErrorCode(ErrorCode.ERROR_OK);
             } else {
                 userInfoDto.setErrorCode(ErrorCode.ERROR_DATA);

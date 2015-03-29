@@ -11,13 +11,17 @@
           passwd,
           true_name,
           mobile,
-          email
+          email,
+          create_time,
+          update_time
         ) VALUES (
           #{accountId},
           #{passwd},
           #{trueName},
           #{mobile},
-          #{email}
+          #{email},
+          now(),
+          now()
         )
     </insert>
 

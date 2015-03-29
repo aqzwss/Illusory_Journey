@@ -10,7 +10,7 @@
     <file url="file://$PROJECT_DIR$/ij.user.impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.webapp.server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ij.webapp.server/src" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ij.webapp.server/src/test/java/net/moonlithome/game/server/account/action/AccountOperationActionTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ij.webapp.server/src/test/java/net/moonlithome/game/server/account/action/AccountOperationActionTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/ij.webapp.system" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

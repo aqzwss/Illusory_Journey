@@ -10,7 +10,6 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 
 import java.io.BufferedReader;
@@ -42,6 +41,7 @@ public class HttpClientUtil {
                 HttpClient httpClient = HttpClientBuilder.create().build();
                 HttpPost httpPost = new HttpPost(new URI(baseUrl + serverUrl));
                 System.out.println("HTTP CONNECTION REQUEST URI:" + baseUrl + serverUrl);
+                System.out.println("REQUEST PARAM:" + JsonBeanUtil.beanToJson(postDto));
                 StringEntity requestJson = new StringEntity(JsonBeanUtil.beanToJson(postDto));
                 requestJson.setContentEncoding("UTF-8");
                 requestJson.setContentType("application/json");

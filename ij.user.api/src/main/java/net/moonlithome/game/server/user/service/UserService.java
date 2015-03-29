@@ -12,7 +12,7 @@ public interface UserService extends BaseService{
 
     public boolean userRegist(UserInfoDto userInfoDto);
 
-    public UserInfoDto getUserInfo(String accountId);
+    public UserInfoDto getUserInfo(String userId);
 
     public UserAttributeDto getUserAttribute(String userId);
 
