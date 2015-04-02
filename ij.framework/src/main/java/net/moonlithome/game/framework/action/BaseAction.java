@@ -38,4 +38,9 @@ public class BaseAction {
 
         response.getWriter().print(JsonBeanUtil.beanToJson(o));
     }
+
+    protected boolean permission_check(){
+        return true;
+    }
+
 }

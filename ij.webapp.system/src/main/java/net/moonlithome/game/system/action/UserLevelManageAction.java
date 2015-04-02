@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by MF on 3/15/2015.
  */
 @Controller
+@RequestMapping("/system")
 public class UserLevelManageAction extends BaseAction{
 
     @Autowired
@@ -24,34 +25,37 @@ public class UserLevelManageAction extends BaseAction{
     @RequestMapping("/addUserLevel")
     public void addUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
         UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
-        //TODO check session
-        if(userLevelDto != null){
-            userLevelManageDao.addUserLevel(userLevelDto);
+        if(permission_check()) {
+            if (userLevelDto != null) {
+                userLevelManageDao.addUserLevel(userLevelDto);
+            }
+            BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
+            responseJson(response, baseCommunicationDto);
         }
-        BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
-        responseJson(response, baseCommunicationDto);
     }
 
     @RequestMapping("/updateUserLevel")
     public void updateUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
         UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
-        //TODO check session
-        if(userLevelDto != null){
-            userLevelManageDao.updateUserLevel(userLevelDto);
+        if(permission_check()) {
+            if (userLevelDto != null) {
+                userLevelManageDao.updateUserLevel(userLevelDto);
+            }
+            BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
+            responseJson(response, baseCommunicationDto);
         }
-        BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
-        responseJson(response, baseCommunicationDto);
     }
 
     @RequestMapping("/removeUserLevel")
     public void removeUserLevel(HttpServletRequest request, HttpServletResponse response) throws Exception {
         UserLevelDto userLevelDto = JsonBeanUtil.getBeanFromJson(getJsonFromRequest(request), UserLevelDto.class);
-        //TODO check session
-        if(userLevelDto != null){
-            userLevelManageDao.removeUserLevel(userLevelDto.getId());
+        if(permission_check()) {
+            if (userLevelDto != null) {
+                userLevelManageDao.removeUserLevel(userLevelDto.getId());
+            }
+            BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
+            responseJson(response, baseCommunicationDto);
         }
-        BaseCommunicationDto baseCommunicationDto = new BaseCommunicationDto();
-        responseJson(response, baseCommunicationDto);
     }
 
     @RequestMapping("/getUserLevel")

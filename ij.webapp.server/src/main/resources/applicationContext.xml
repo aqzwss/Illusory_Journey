@@ -13,7 +13,9 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="net.moonlithome.game.server"/>
+
+    <context:component-scan base-package="net.moonlithome.game"/>
+
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -51,5 +53,6 @@
 
     <mybatis:scan base-package="net.moonlithome.game.server.account.mapper" />
     <mybatis:scan base-package="net.moonlithome.game.server.user.mapper" />
+
 
 </beans>

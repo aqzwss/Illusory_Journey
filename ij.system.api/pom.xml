@@ -18,7 +18,6 @@
     </properties>
 
     <dependencies>
-
         <!--module-->
         <dependency>
             <groupId>net.moonlithome.game</groupId>

@@ -26,8 +26,7 @@
         <module name="ij.common" />
         <module name="ij.framework" />
         <module name="ij.item.api" />
-        <module name="ij.manage.api" />
-        <module name="ij.manage.impl" />
+        <module name="ij.item.impl" />
         <module name="ij.system.api" />
         <module name="ij.system.impl" />
         <module name="ij.user.api" />
@@ -43,10 +42,6 @@
       <module name="ij.user.impl" target="1.6" />
       <module name="ij.webapp.server" target="1.6" />
       <module name="ij.webapp.system" target="1.6" />
-      <module name="Illusory_Journey" target="1.6" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
   </component>
 </project>

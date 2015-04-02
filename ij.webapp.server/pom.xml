@@ -38,6 +38,17 @@
             <artifactId>ij.user.impl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>net.moonlithome.game</groupId>
+            <artifactId>ij.item.api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.moonlithome.game</groupId>
+            <artifactId>ij.item.impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!--spring-->
         <dependency>
             <groupId>org.springframework</groupId>

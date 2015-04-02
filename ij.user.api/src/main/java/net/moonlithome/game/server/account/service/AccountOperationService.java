@@ -5,10 +5,11 @@ import net.moonlithome.game.common.dto.user.UserInfoDto;
 import net.moonlithome.game.common.service.BaseService;
 import net.moonlithome.game.framework.dto.BaseCommunicationDto;
 
+
 /**
  * Created by moonlithome on 2015/3/17.
  */
-public interface AccountOperationService extends BaseService{
+public interface AccountOperationService{
 
     public BaseCommunicationDto accountRegist(AccountInfoDto accountInfoDto);
 

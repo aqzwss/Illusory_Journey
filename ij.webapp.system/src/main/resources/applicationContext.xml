@@ -51,9 +51,13 @@
         <!--<property name="markerInterface" value="com.account.daoer"/>-->
     <!--</bean>-->
 
+<<<<<<< HEAD
     <mybatis:scan base-package="net.moonlithome.game.server.user.mapper" />
 
 
 
+=======
+    <mybatis:scan base-package="net.moonlithome.game.server" />
+>>>>>>> master
 
 </beans>
