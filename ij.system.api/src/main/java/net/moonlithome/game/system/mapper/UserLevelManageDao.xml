@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.moonlithome.game.system.mapper.UserLevelManageDao">
+
+    <resultMap id="userLevelResultMap" type="net.moonlithome.game.common.dto.user.UserLevelDto">
+        <result property="levelFlag" column="level_flag"/>
+        <result property="beforeName" column="before_name"/>
+        <result property="afterName" column="after_name"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="getUserLevel">
+        SELECT * FROM user_level
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+    
+    <insert id="addUserLevel">
+        INSERT INTO user_level
+        (
+          level_flag,
+          before_name,
+          after_name,
+          experience,
+          adventure,
+          create_time,
+          update_time
+        ) VALUES (
+          #{levelFlag},
+          #{beforeName},
+          #{afterName},
+          #{experience},
+          #{adventure},
+          now(),
+          now()
+        )
+    </insert>
+    
+    <update id="updateUserLevel">
+        UPDATE user_level
+        SET update_time = now()
+            <if test="levelFlag != null">
+                ,level_flag = #{levelFlag}
+            </if>
+            <if test="beforeName != null">
+                ,before_name = #{beforeName}
+            </if>
+            <if test="afterName != null">
+                ,after_name = #{afterName}
+            </if>
+            <if test="experience != null">
+                ,experience = #{experience}
+            </if>
+            <if test="adventure != null">
+                ,adventure = #{adventure}
+            </if>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="removeUserLevel">
+        DELETE FROM user_level
+        WHERE id = #{id}
+    </delete>
+
+</mapper>

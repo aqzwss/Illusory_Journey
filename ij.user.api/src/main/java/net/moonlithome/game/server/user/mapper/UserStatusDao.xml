@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.moonlithome.game.server.user.mapper.UserStatusDao">
+
+    <resultMap id="userStatusResultMap" type="net.moonlithome.game.common.dto.user.UserStatusDto">
+        <result property="userId" column="user_id"/>
+        <result property="currentHp" column="current_hp"/>
+        <result property="maxHp" column="max_hp"/>
+        <result property="currentMp" column="current_mp"/>
+        <result property="maxMp" column="max_mp"/>
+    </resultMap>
+
+
+    <select id="getUserStatus" resultMap="userStatusResultMap">
+        SELECT * FROM user_status
+        <where>
+            <if test="userId != null">
+                user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addUserStatus">
+        INSERT INTO user_status
+        (
+        user_id,
+        current_hp,
+        max_hp,
+        current_mp,
+        max_mp,
+        create_time,
+        update_time
+        ) VALUES (
+        userId,
+        currentHp,
+        maxHp,
+        currentMp,
+        maxMp,
+        now(),
+        now()
+        )
+    </insert>
+
+    <update id="updateUserStatus">
+        UPDATE user_status
+        SET update_time = now()
+        <if test="userId != null">
+            ,user_id = #{userId}
+        </if>
+        <if test="currentHp != null">
+            ,current_hp = #{currentHp}
+        </if>
+        <if test="maxHp != null">
+            ,max_hp = #{maxHp}
+        </if>
+        <if test="currentMp != null">
+            ,current_mp = #{currentMp}
+        </if>
+        <if test="maxMp != null">
+            ,max_mp = #{maxMp}
+        </if>
+    </update>
+
+    <delete id="removeUserStatus">
+        DELETE FROM user_status
+        WHERE user_id = #{userId}
+    </delete>
+</mapper>

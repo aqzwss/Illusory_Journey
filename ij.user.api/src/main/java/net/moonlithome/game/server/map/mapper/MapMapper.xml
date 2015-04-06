@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.moonlithome.game.server.map.mapper.MapMapper">
+
+    <resultMap id="mapResult" type="net.moonlithome.game.common.dto.map.MapInfoDto">
+        <result property="mapId" column="map_id"/>
+    </resultMap>
+
+    <select id="getMapInfo" resultMap="mapResult">
+        SELECT * FROM map
+        <where>
+            <if test="mapId != null and mapId != ''">
+                map_id = #{mapId}
+            </if>
+        </where>
+    </select>
+
+
+
+</mapper>

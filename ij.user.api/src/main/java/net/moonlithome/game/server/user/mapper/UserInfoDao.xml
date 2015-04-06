@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.moonlithome.game.server.user.mapper.UserInfoDao">
+
+    <resultMap id="userInfoResultMap" type="net.moonlithome.game.common.dto.user.UserInfoDto">
+        <result property="userId" column="user_id"/>
+        <result property="levelFlag" column="level_flag"/>
+        <result property="exIncreaseRate" column="ex_increase_rate"/>
+        <result property="positionId" column="position_id"/>
+        <result property="bagId" column="bag_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+
+    <select id="getUserInfo" resultMap="userInfoResultMap">
+        SELECT * FROM user_info
+        <where> 1=1
+            <if test="userId != null and userId != ''">
+                AND user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+    <insert id="addUserInfo">
+        INSERT INTO user_info
+        (
+        user_id,
+        name,
+        sex,
+        race,
+        level_flag,
+        experience,
+        ex_increase_rate,
+        position_id,
+        bag_id,
+        create_time,
+        update_time
+        ) VALUES (
+        userId,
+        name,
+        sex,
+        race,
+        levelFlag,
+        experience,
+        exIncreaseRate,
+        positionId,
+        bagId,
+        now(),
+        now()
+        )
+    </insert>
+
+    <update id="updateUserInfo">
+        UPDATE user_info
+        SET update_time = now()
+        <if test="userId != null">
+            ,user_id = #{userId}
+        </if>
+        <if test="name != null">
+            ,name = #{name}
+        </if>
+        <if test="sex != null">
+            ,sex = #{sex}
+        </if>
+        <if test="race != null">
+            ,race = #{race}
+        </if>
+        <if test="levelFlag != null">
+            ,level_flag = #{levelFlag}
+        </if>
+        <if test="experience != null">
+            ,experience = #{experience}
+        </if>
+        <if test="exIncreaseRate != null">
+            ,ex_increase_rate = #{exIncreaseRate}
+        </if>
+        <if test="positionId != null">
+            ,position_id = #{positionId}
+        </if>
+        <if test="bagId != null">
+            ,bag_id = #{bagId}
+        </if>
+    </update>
+
+    <delete id="removeUserInfo">
+        DELETE FROM user_info
+        WHERE user_id = #{userId}
+    </delete>
+</mapper>

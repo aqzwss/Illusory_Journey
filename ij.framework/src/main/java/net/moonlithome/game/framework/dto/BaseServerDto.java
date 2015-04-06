@@ -1,12 +1,11 @@
 package net.moonlithome.game.framework.dto;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by MF on 3/14/2015.
  */
-public class BaseServerDto implements Serializable {
+public class BaseServerDto extends BaseCommunicationDto{
     private int id;
     private Date createTime;
     private Date updateTime;
