@@ -9,10 +9,7 @@ import net.moonlithome.game.server.account.service.AccountOperationService;
 import net.moonlithome.game.server.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-<<<<<<< HEAD
 import org.springframework.util.StringUtils;
-=======
->>>>>>> master
 
 /**
  * Created by moonlithome on 2015/3/17.
@@ -46,6 +43,7 @@ public class AccountOperationServiceImpl implements AccountOperationService{
         if(!StringUtils.isEmpty(accountInfoDto.getAccountId()) && !StringUtils.isEmpty(accountInfoDto.getPasswd())){
             if(accountInfoDto.getPasswd().equals(this.getPasswdClose(accountInfoDto.getAccountId()))){
                 userInfoDto = userService.getUserInfo(accountInfoDto.getUserId());
+
                 userInfoDto.setErrorCode(ErrorCode.ERROR_OK);
             } else {
                 userInfoDto.setErrorCode(ErrorCode.ERROR_DATA);
